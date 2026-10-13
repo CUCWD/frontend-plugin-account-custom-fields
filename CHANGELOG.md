@@ -9,6 +9,14 @@ All notable changes to this project will be documented in this file.
 - Enable the semantic-release workflow on pushes to `develop/ulmo.master`.
 - Configure `develop/ulmo.master` as the regular semantic-release branch instead of an alpha prerelease branch requiring a separate `stable` branch.
 - Use GitHub Actions' automatic `GITHUB_TOKEN` with release and issue/pull-request comment permissions, replacing the rejected custom GitHub token. Keep npm authentication through `SEMANTIC_RELEASE_NPM_TOKEN`.
+- Switch npm releases to OIDC Trusted Publishing and remove the npm token secret reference from the release workflow.
+- Install npm 11.12.1 explicitly for Trusted Publishing support; retain the automatic GitHub token for GitHub releases.
+- Run lint, tests, and a package dry run after installing dependencies and before publishing.
+
+**Documentation**
+
+- Document the initial interactive npm publication commands, organization access requirements, package verification, and release tag alignment before configuring Trusted Publishing.
+- Document the GitHub Actions trusted publisher settings and token-free npm authentication for subsequent automated releases.
 
 **Features**
 

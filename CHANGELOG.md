@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.0] - 2026-10-13
 
+**Build**
+
+- Enable the semantic-release workflow on pushes to `develop/ulmo.master`.
+- Configure GitHub and npm authentication through the `SEMANTIC_RELEASE_GITHUB_TOKEN` and `SEMANTIC_RELEASE_NPM_TOKEN` Actions secrets.
+
 **Features**
 
 - Add `ZipCodeField` and `ProfileFields` widgets for the Account MFE plugin slots.

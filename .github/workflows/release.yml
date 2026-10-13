@@ -11,8 +11,6 @@ permissions:
 jobs:
   release:
     name: Release
-    # Publishing is disabled while this plugin's release setup is being migrated.
-    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,4 +29,5 @@ jobs:
       - name: Release to npm/Github
         run: npx semantic-release@25
         env:
-          GITHUB_TOKEN: ${{ secrets.OPENEDX_SEMANTIC_RELEASE_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }}

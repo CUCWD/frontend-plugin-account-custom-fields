@@ -7,6 +7,8 @@ on:
 permissions:
   id-token: write  # Required for OIDC
   contents: write  # For Semantic Release tagging
+  issues: write  # For release success/failure comments
+  pull-requests: write  # For release comments
 
 jobs:
   release:
@@ -29,5 +31,5 @@ jobs:
       - name: Release to npm/Github
         run: npx semantic-release@25
         env:
-          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }}

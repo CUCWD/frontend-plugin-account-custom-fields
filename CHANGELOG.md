@@ -7,7 +7,8 @@ All notable changes to this project will be documented in this file.
 **Build**
 
 - Enable the semantic-release workflow on pushes to `develop/ulmo.master`.
-- Configure GitHub and npm authentication through the `SEMANTIC_RELEASE_GITHUB_TOKEN` and `SEMANTIC_RELEASE_NPM_TOKEN` Actions secrets.
+- Configure `develop/ulmo.master` as the regular semantic-release branch instead of an alpha prerelease branch requiring a separate `stable` branch.
+- Use GitHub Actions' automatic `GITHUB_TOKEN` with release and issue/pull-request comment permissions, replacing the rejected custom GitHub token. Keep npm authentication through `SEMANTIC_RELEASE_NPM_TOKEN`.
 
 **Features**
 
